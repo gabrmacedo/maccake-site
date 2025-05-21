@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacCake | Cardápio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fdfaf7;
+            color: #5e3b3b;
+        }
+        header {
+            background-color: #f7e9e4;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #d77a7a;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #fff3ec;
+            padding: 10px;
+            border-bottom: 2px solid #f3dad2;
+        }
+        nav button {
+            background-color: transparent;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 10px;
+            color: #d77a7a;
+        }
+        nav button:hover {
+            border-bottom: 2px solid #d77a7a;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            width: 280px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .item:hover {
+            transform: scale(1.03);
+        }
+        .item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .item-content {
+            padding: 15px;
+        }
+        .item-content h3 {
+            margin-top: 0;
+            color: #cc5f5f;
+        }
+        .item-content p {
+            font-size: 0.95em;
+        }
+        .item-content a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #cc5f5f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .item-content a:hover {
+            background-color: #b14d4d;
+        }
+    </style>
+    <script>
+        function filterCategory(category) {
+            let items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>MacCake</h1>
+        <p>Bolos decorados para momentos inesquecíveis</p>
+        <p class="frase pequena">caso queira um sabor do seu gosto nos informe nos canais de contato.</p>
+    </header>
+    <nav>
+        <button onclick="filterCategory('all')">Todos</button>
+        <button onclick="filterCategory('aniversario')">Aniversário</button>
+        <button onclick="filterCategory('casamento')">Casamento</button>
+        <button onclick="filterCategory('pote')">Bolos no Pote</button>
+    </nav>
+    <div class="menu">
+        <div class="item aniversario">
+            <img src="imagens/recheiomorang.jpg" alt="Bolo de Aniversário">
+            <div class="item-content">
+                <h3>Choco Morango</h3>
+                <p>Bolo de chocolate com recheio de morango e cobertura cremosa.</p>
+                <a href="https://wa.me/5554992467089" target="_blank">Fazer pedido</a>
+            </div>
+        </div>
+        <div class="item casamento">
+            <img src="imagens/floral.jpg" alt="Bolo de Casamento">
+            <div class="item-content">
+                <h3>Branco Luxo</h3>
+                <p>Bolo branco com recheio de damasco e cobertura floral delicada.</p>
+                <a href="https://wa.me/5554992467089" target="_blank">Fazer pedido</a>
+            </div>
+        </div>
+        <div class="item aniversario">
+            <img src="imagens/nutella.jpg" alt="Bolo no Pote">
+            <div class="item-content">
+                <h3>Ninho com Nutella</h3>
+                <p>Camadas de creme de ninho com Nutella irresistível.</p>
+                <a href="https://wa.me/5554992467089" target="_blank">Fazer pedido</a>
+            </div>
+        </div>
+    
+<div class="item aniversario">
+    <img src="imagens/recheiomorang.jpg" alt="Bolo Red Velvet">
+    <div class="item-content">
+        <h3>Red Velvet Supremo</h3>
+        <p>Clássico bolo vermelho com morango e recheio suave de cream cheese com toque de baunilha.</p>
+        <a href="https://wa.me/5554992467089" target="_blank">Fazer pedido</a>
+    </div>
+</div>
+
+
+<div class="item casamento">
+    <img src="imagens/bolofrutasverm.jpg" alt="Bolo Rosé de Casamento">
+    <div class="item-content">
+        <h3>Rosé Elegance</h3>
+        <p>Bolo delicado de baunilha com recheio de frutas vermelhas e decoração floral sofisticada.</p>
+        <a href="https://wa.me/5554992467089" target="_blank">Fazer pedido</a>
+    </div>
+</div>
+
+<div class="item pote">
+    <img src="imagens/brownie.jpg" alt="Bolo no Pote de Brownie">
+    <div class="item-content">
+        <h3>Brownie Cremoso</h3>
+        <p>Pote com camadas de brownie, brigadeiro gourmet e pedacinhos crocantes.</p>
+        <a href="https://wa.me/5554992467089" target="_blank">Fazer pedido</a>
+    </div>
+</div>
+
+</div>
+
+<footer style="background-color: #fff3ec; text-align: center; padding: 15px; margin-top: 30px;">
+    <p>Siga a <strong>MacCake</strong> no Instagram: 
+        <a href="https://instagram.com/maccake_bolos" target="_blank" style="color: #d77a7a; text-decoration: none;">
+            @maccake_bolos
+        </a>
+    </p>
+</footer>
+</body>
+</html>
